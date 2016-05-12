@@ -9,6 +9,9 @@ namespace AskDonJuan.Models
 {
     public class QueryModel
     {
+        [Key]
+        public int QueryKey { get; set; }
+
         //Should InRelationship be unknown as well?
         [Display(Name = "Are you in a relationship?")]
         public bool InRelationship { get; set; }
@@ -27,9 +30,14 @@ namespace AskDonJuan.Models
         //[DisplayFormat(DataFormatString = "{0:MM/dd/yy}", ApplyFormatInEditMode = true)]
         public TimeSpan DatingLength { get; set; }
 
-        //[Display(Name = "How mean are you?")]
-        //[Required(ErrorMessage="Please enter how kind/mean you want to be")]
-        //[EnumDataType()]
+        //[Required]
+        //[RegularExpression(".+\\@.+\\..+")]
+        //public string Email { get; set; }
+
+
+        [Display(Name = "How mean are you?")]
+        [Required(ErrorMessage = "Please enter how kind/mean you want to be")]
+        public MeanessEnum Meaness { get; set; }
         public enum MeanessEnum
         {
             Kind,
