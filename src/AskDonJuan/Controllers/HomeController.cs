@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Mvc;
+using AskDonJuan.Models;
 
 namespace AskDonJuan.Controllers
 {
@@ -15,7 +16,7 @@ namespace AskDonJuan.Controllers
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Your application description page.";
+            ViewData["Message"] = new ResponseModel().GetRandomResponse(); ;
 
             return View();
         }
