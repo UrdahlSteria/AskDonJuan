@@ -6,51 +6,7 @@
 
 <h2>Index</h2>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.DatingLength)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.InRelationship)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Meaness)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.OtherAge)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.UserAge)
-        </th>
-        <th></th>
-    </tr>
-    
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.DatingLength)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.InRelationship)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Meaness)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.OtherAge)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.UserAge)
-        </td>
-        <td>
-            <a asp-action="Edit" asp-route-id="@item.QueryKey">Edit</a> |
-            <a asp-action="Details" asp-route-id="@item.QueryKey">Details</a> |
-            <a asp-action="Delete" asp-route-id="@item.QueryKey">Delete</a>
-        </td>
-    </tr>
-}
-</table>
+<p>To be created...</p>
+<a asp-controller="Home" asp-action="Index">Home</a>
+
+

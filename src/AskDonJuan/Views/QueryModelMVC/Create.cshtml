@@ -12,12 +12,16 @@
         <hr />
         <div asp-validation-summary="ValidationSummary.ModelOnly" class="text-danger"></div>
         <div class="form-group">
-            <label asp-for="DatingLength" class="col-md-2 control-label"></label>
+            <label asp-for="DurationVariable" class="col-md-2 control-label"></label>
             <div class="col-md-10">
-                <input asp-for="DatingLength" class="form-control" />
-                <span asp-validation-for="DatingLength" class="text-danger" />
+                @Html.DropDownList("DurationType", Html.GetEnumSelectList(typeof(QueryModel.DurationEnum)),
+               "Select Dating Type...",
+               new { @class = "form-control" }) <input asp-for="DurationVariable" type="number" min="1" max="50" value="1"/>
+                @*<input asp-for="DatingLength" class="form-control" />*@
+                <span asp-validation-for="DurationVariable" class="text-danger" />
             </div>
         </div>
+
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <div class="checkbox">
@@ -29,21 +33,24 @@
         <div class="form-group">
             <label asp-for="Meaness" class="col-md-2 control-label"></label>
             <div class="col-md-10">
-                <select asp-for="Meaness" class="form-control"></select>
+                   @Html.DropDownList("Meaness", Html.GetEnumSelectList(typeof(QueryModel.MeanessEnum)),
+                  "How Mean Are You?",
+                  new { @class = "form-control" } )
+    @*<select asp-for="Meaness" class="form-control"></select>*@
                 <span asp-validation-for="Meaness" class="text-danger" />
             </div>
         </div>
         <div class="form-group">
             <label asp-for="OtherAge" class="col-md-2 control-label"></label>
             <div class="col-md-10">
-                <input asp-for="OtherAge" class="form-control" />
+                <input asp-for="OtherAge" class="form-control" type="number" min="14" max="99" value="25"/>
                 <span asp-validation-for="OtherAge" class="text-danger" />
             </div>
         </div>
         <div class="form-group">
             <label asp-for="UserAge" class="col-md-2 control-label"></label>
             <div class="col-md-10">
-                <input asp-for="UserAge" class="form-control" />
+                <input asp-for="UserAge" class="form-control" type="number" min="14" max="99" value="25" />
                 <span asp-validation-for="UserAge" class="text-danger" />
             </div>
         </div>
