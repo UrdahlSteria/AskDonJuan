@@ -25,10 +25,21 @@ namespace AskDonJuan.Models
         [Range(16,99)]
         public int OtherAge { get; set; }
 
-        [Display(Name = "Relationship Length")]
-        [DataType(DataType.Duration)]        // Uncertain weather this is the correct DataType for TimeSpan
+        [Display(Name = "Relationship Length Type")]
         //[DisplayFormat(DataFormatString = "{0:MM/dd/yy}", ApplyFormatInEditMode = true)]
-        public TimeSpan DatingLength { get; set; }
+        public DurationEnum DurationType{ get; set; }
+
+        [Display(Name = "Relationship Length" )]
+        public int DurationVariable { get; set; }
+
+
+        public enum DurationEnum
+        {
+            Number_of_Dates,
+            Weeks_Dating,
+            Weeks_Together,
+            Years_Together
+        };
 
         //[Required]
         //[RegularExpression(".+\\@.+\\..+")]

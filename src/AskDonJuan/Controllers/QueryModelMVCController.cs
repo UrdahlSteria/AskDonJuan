@@ -18,7 +18,7 @@ namespace AskDonJuan.Controllers
         // GET: QueryModelMVC
         public IActionResult Index()
         {
-            return View(_context.QueryModel.ToList());
+            return View();
         }
 
         // GET: QueryModelMVC/Details/5
