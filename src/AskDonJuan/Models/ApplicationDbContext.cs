@@ -18,5 +18,6 @@ namespace AskDonJuan.Models
             // Add your customizations after calling base.OnModelCreating(builder);
         }
         public DbSet<QueryModel> QueryModel { get; set; }
+        public DbSet<ResponseModel> ResponseModel { get; set; }
     }
 }

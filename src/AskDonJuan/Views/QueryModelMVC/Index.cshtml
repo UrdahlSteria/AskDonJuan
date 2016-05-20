@@ -1,12 +1,12 @@
-@model IEnumerable<AskDonJuan.Models.QueryModel>
+@model AskDonJuan.Models.ResponseModel
 
 @{
     ViewData["Title"] = "Index";
 }
 
-<h2>Index</h2>
+<h2>How to respond</h2>
 
-<p>To be created...</p>
+<p> @Model.TheResponse </p>
 <a asp-controller="Home" asp-action="Index">Home</a>
 
 
